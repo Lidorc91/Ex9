@@ -8,7 +8,7 @@ public class Tile {
 	public final char letter;
 	public final int score;
 
-	private Tile(char l, int s) {
+	Tile(char l, int s) {
 		this.letter = l;
 		this.score = s;
 	}
@@ -39,7 +39,7 @@ public class Tile {
 		private final ArrayList<Tile> _tiles = new ArrayList<>(26);
 
 		public Bag() {
-			for (int i = 0; i < 25; i++) {
+			for (int i = 0; i < 25; i++) { //Add Game Tiles
 				_tiles.add(i, new Tile((char) ('A' + i), _tileScores[i]));
 			}
 		}
